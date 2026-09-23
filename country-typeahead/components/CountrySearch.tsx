@@ -104,13 +104,13 @@ export default function CountrySearch() {
           >
             {status === "error" && (
               <li className="px-3 py-2 text-sm text-red-600" role="alert">
-                Couldn't load results — {errorMessage}. Try again.
+                {`Couldn't load results — ${errorMessage}. Try again.`}
               </li>
             )}
 
             {status === "empty" && (
               <li className="px-3 py-2 text-sm text-gray-500">
-                No countries match "{debouncedQuery.trim()}".
+                {`No countries match "${debouncedQuery.trim()}".`}
               </li>
             )}
 
